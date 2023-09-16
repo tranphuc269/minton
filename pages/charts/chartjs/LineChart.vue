@@ -1,24 +1,24 @@
 <script>
-import { Line } from 'vue-chartjs'
+import { Line } from "vue-chartjs";
 
 export default {
   extends: Line,
   mounted() {
     this.renderChart(
       {
-        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
         datasets: [
           {
-            label: 'Current Week',
-            backgroundColor: 'rgba(59, 175, 218, 0.3)',
-            borderColor: '#3bafda',
+            label: "Current Week",
+            backgroundColor: "rgba(59, 175, 218, 0.3)",
+            borderColor: "#3bafda",
             data: [32, 42, 42, 62, 52, 75, 62],
           },
           {
-            label: 'Previous Week',
+            label: "Previous Week",
             fill: true,
-            backgroundColor: 'transparent',
-            borderColor: '#f672a7',
+            backgroundColor: "transparent",
+            borderColor: "#f672a7",
             borderDash: [5, 5],
             data: [42, 58, 66, 93, 82, 105, 92],
           },
@@ -46,7 +46,7 @@ export default {
             {
               reverse: true,
               gridLines: {
-                color: 'rgba(0,0,0,0.05)',
+                color: "rgba(0,0,0,0.05)",
               },
             },
           ],
@@ -58,14 +58,14 @@ export default {
               display: true,
               borderDash: [5, 5],
               gridLines: {
-                color: 'rgba(0,0,0,0)',
-                fontColor: '#fff',
+                color: "rgba(0,0,0,0)",
+                fontColor: "#fff",
               },
             },
           ],
         },
       }
-    )
+    );
   },
-}
+};
 </script>
