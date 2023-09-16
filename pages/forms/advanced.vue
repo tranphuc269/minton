@@ -1,97 +1,97 @@
 <script>
-import DatePicker from 'vue2-datepicker'
-import Switches from 'vue-switches'
-import Multiselect from 'vue-multiselect'
+import DatePicker from "vue2-datepicker";
+import Switches from "vue-switches";
+import Multiselect from "vue-multiselect";
 import NumberInputSpinner from "vue-number-input-spinner";
 
 /**
  * Form Advanced component
  */
 export default {
-    head() {
-        return {
-            title: `${this.title} | Minton - Nuxtjs Responsive Admin Dashboard Template`
-        }
-    },
-    components: {
-        DatePicker,
-        Switches,
-        Multiselect,
-        NumberInputSpinner
-    },
-    data() {
-        return {
-            title: 'Form Advanced',
-            items: [{
-                    text: 'Minton',
-                    href: '/',
-                },
-                {
-                    text: 'Forms',
-                    href: '/',
-                },
-                {
-                    text: 'Advanced',
-                    active: true,
-                },
-            ],
-            defaultdate: "",
-            autoClose: "",
-            daterange: "",
-            demoMonth: "",
-            demoYear: "",
-            time: "",
-            time1: '',
-            time2: '',
-            time3: '',
-            enabled: false,
-            enabled1: false,
-            enabled2: false,
-            enabled3: false,
-            enabled4: false,
-            enabled5: false,
-            small: false,
-            small1: false,
-            small2: false,
-            small3: false,
-            danger: false,
-            info: false,
-            success: false,
-            primary: false,
-            value: null,
-            value1: null,
-            options: [
-                'Alaska',
-                'Hawaii',
-                'California',
-                'Nevada',
-                'Oregon',
-                'Washington',
-                'Arizona',
-                'Colorado',
-                'Idaho',
-                'Montana',
-                'Nebraska',
-                'New Mexico',
-                'North Dakota',
-                'Utah',
-                'Wyoming',
-                'Alabama',
-                'Arkansas',
-                'Illinois',
-                'Iowa',
-            ],
-            maxlen: '',
-            data: '',
-            option: '',
-            textarea: '',
-            defaultspinval: 1,
-            defaultNull: null
-
-        }
-    },
-    middleware: 'router-auth'
-}
+  head() {
+    return {
+      title: `${this.title} | Minton - Nuxtjs Responsive Admin Dashboard Template`,
+    };
+  },
+  components: {
+    DatePicker,
+    Switches,
+    Multiselect,
+    NumberInputSpinner,
+  },
+  data() {
+    return {
+      title: "Form Advanced",
+      items: [
+        {
+          text: "Minton",
+          href: "/",
+        },
+        {
+          text: "Forms",
+          href: "/",
+        },
+        {
+          text: "Advanced",
+          active: true,
+        },
+      ],
+      defaultdate: "",
+      autoClose: "",
+      daterange: "",
+      demoMonth: "",
+      demoYear: "",
+      time: "",
+      time1: "",
+      time2: "",
+      time3: "",
+      enabled: false,
+      enabled1: false,
+      enabled2: false,
+      enabled3: false,
+      enabled4: false,
+      enabled5: false,
+      small: false,
+      small1: false,
+      small2: false,
+      small3: false,
+      danger: false,
+      info: false,
+      success: false,
+      primary: false,
+      value: null,
+      value1: null,
+      options: [
+        "Alaska",
+        "Hawaii",
+        "California",
+        "Nevada",
+        "Oregon",
+        "Washington",
+        "Arizona",
+        "Colorado",
+        "Idaho",
+        "Montana",
+        "Nebraska",
+        "New Mexico",
+        "North Dakota",
+        "Utah",
+        "Wyoming",
+        "Alabama",
+        "Arkansas",
+        "Illinois",
+        "Iowa",
+      ],
+      maxlen: "",
+      data: "",
+      option: "",
+      textarea: "",
+      defaultspinval: 1,
+      defaultNull: null,
+    };
+  },
+  middleware: "router-auth",
+};
 </script>
 
 <template lang="en">
