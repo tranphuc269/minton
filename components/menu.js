@@ -17,7 +17,7 @@ const menuItems = [
       {
         id: 3,
         label: "menuitems.dashboard.list.sales",
-        link: "/dashboard/sales",
+        link: "",
       },
       {
         id: 4,
