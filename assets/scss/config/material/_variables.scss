@@ -54,7 +54,7 @@ $bg-topbar-light:                                 #ffffff;
 $bg-topbar-dark:                                  #0056c1;
 
 // Leftbar item shadow (Condensed item)
-$box-shadow-condensed:                              3px 5px 10px 0 rgba(154,161,171,.2); 
+$box-shadow-condensed:                              3px 5px 10px 0 rgba(154,161,171,.2);
 
 // Topnav Height (Horizontal)
 $topnav-height:                                     55px;
@@ -104,7 +104,7 @@ $chat-secondary-user-bg:                          #f1f3fa;
 // Text-color (h1 to h6)
 $text-color-h:                                    #343a40;
 
-// Card overlay 
+// Card overlay
 $card-overlay-color:                              #3e4852;
 $card-overlay-bg:                                   rgba(#ffffff, 0.8);
 
@@ -121,7 +121,7 @@ $components-shadow-sm:                              0 1px 4px 0 rgba(0,0,0,.1);
 $components-shadow:                                 0 2px 6px -2px rgba(0,0,0,.16), 0 2px 6px 0 rgba(0,0,0,.12);
 $components-shadow-lg:                              0 0 45px 0 rgba(0, 0, 0, 0.12);
 
-// label 
+// label
 $label-font-weight:                                 500;
 
 // Table Head
@@ -130,7 +130,7 @@ $table-head-font-weight:                            500;
 
 //
 // Color system
-// 
+//
 
 $white:    #fff;
 $gray-100: #f7f8f9;
@@ -220,7 +220,7 @@ $theme-colors: map-merge(
     "pink":       $pink,
     "purple":     $purple
   ),  $theme-colors);
-  
+
   // Set a specific jump point for requesting color jumps
 $theme-color-interval:      8%;
 
@@ -850,7 +850,7 @@ $nav-divider-margin-y:              $spacer / 3;
 
 // Navbar
 
-$navbar-padding-y:                  $spacer / 2;
+$navbar-padding-y:                  calc($spacer / 2);
 $navbar-padding-x:                  $spacer;
 
 $navbar-nav-link-padding-x:         .5rem;
