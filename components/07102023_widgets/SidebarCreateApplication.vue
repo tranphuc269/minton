@@ -10,6 +10,7 @@
       right
       shadow
       :width="'640px'"
+      @click.stop="handleSidebarClick"
     >
       <template #footer="{ hide }">
         <div class="d-flextext-light align-items-center text-left pb-3">
@@ -18,44 +19,37 @@
 
         </div>
       </template>
-      <b-form-group label-for="backdrop-variant">
+      <b-form-group>
         <div class="text-left application-form-step">
-          <div class="application-form-step-0 "  v-if="step===0">
-            <p>1. Thong tin ung dung</p>
+          <div class="application-form-step-0 " v-if="step===0">
+            <p>1. Thông tin ứng dụng</p>
             <div class="form-group">
               <label>
                 Tên ứng dụng
                 <span class="text-danger">*</span>
               </label>
-              <input  type="email" name="email" class="form-control" placeholder="Tên ứng dụng" />
+              <input type="email" name="email" class="form-control" placeholder="Tên ứng dụng"/>
             </div>
             <div class="form-group">
               <label>
                 Mô tả
                 <span class="text-danger">*</span>
               </label>
-              <textarea  type="email" name="email" class="form-control" placeholder="Nhập mô tả" />
+              <textarea type="email" name="email" class="form-control" placeholder="Nhập mô tả"/>
             </div>
           </div>
-          <div class="application-form-step-1 "  v-if="step===1">
-            <p>2. Thong tin loại tài liệu cần xử lý</p>
+          <div class="application-form-step-1 " v-if="step===1">
+            <p>2. Thông tin loại tài liệu cần xử lý</p>
             <div class="form-group">
-              <input  type="email" name="email" class="form-control" placeholder="Tim kiem loai ung dung" />
+              <input type="email" name="email" class="form-control" placeholder="Tim kiem loai ung dung"/>
             </div>
             <b-tabs content-class>
               <b-tab title="Home" active>
                 <b-form-radio-group>
-                  <b-table :items="items" :fields="fields" hover>
+                  <b-table :items="items" :fields="fields" striped>
                     <!-- Custom Checkbox Slot -->
                     <template #cell(checkbox)="data">
                       <b-form-radio v-model="data.item.selected"></b-form-radio>
-                    </template>
-
-                    <!-- Custom Button Slot -->
-                    <template #cell(actions)="data">
-                      <b-button @click="handleButtonClick(data.item)" variant="primary">
-                        Action
-                      </b-button>
                     </template>
                   </b-table>
                 </b-form-radio-group>
@@ -86,15 +80,14 @@ export default {
     return {
       step: 0,
       items: [
-        { id: 1, name: "Item 1", selected: false },
-        { id: 2, name: "Item 2", selected: false },
-        { id: 3, name: "Item 3", selected: false }
+        {name: "Đăng ký kinh doanh", description: "Gồm Hộ cá nhân, một thành viên, hai thành viên trở lên, trách nhiệm hữu hạn, công ty cổ phần ...", selected: false},
+        {name: "Đăng ký kinh doanh", description: "Gồm Hộ cá nhân, một thành viên, hai thành viên trở lên, trách nhiệm hữu hạn, công ty cổ phần ...", selected: false},
+        {name: "Đăng ký kinh doanh", description: "Gồm Hộ cá nhân, một thành viên, hai thành viên trở lên, trách nhiệm hữu hạn, công ty cổ phần ...", selected: false}
       ],
       fields: [
-        { key: "checkbox", label: "Select", sortable: false },
-        { key: "id", label: "ID" },
-        { key: "name", label: "Name" },
-        { key: "actions", label: "Actions", sortable: false }
+        {key: "checkbox", label: "STT"},
+        {key: "name", label: "Tên loại tài liệu"},
+        {key: "description", label: "Mô tả"},
       ]
     }
   },
@@ -105,11 +98,15 @@ export default {
       /// close sidebar
       this.$emit('init')
     },
-
-    onNextStep(){
-      if(this.step === 0){
-        this.step ++
-      }else{
+    handleSidebarClick(event) {
+      // Ngăn chặn sự kiện click từ lan toả lên các phần tử cha
+      console.log("Hello")
+      event.stopPropagation();
+    },
+    onNextStep() {
+      if (this.step === 0) {
+        this.step++
+      } else {
         // post data
         this.createApplication()
       }
@@ -125,8 +122,11 @@ export default {
   width: 640px;
 }
 
-.d-flextext-light{
+.d-flextext-light {
   padding: 20px 40px;
+}
+b-form-radio{
+  width: 40px;
 }
 
 </style>
